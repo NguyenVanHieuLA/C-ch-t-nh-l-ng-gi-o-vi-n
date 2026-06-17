@@ -136,12 +136,32 @@ let tongBaoHiem = bhxh + bhyt + bhtn;
 let thucNhan = tong - tongBaoHiem;
 
     document.getElementById("ketqua").innerHTML = `
-        <div class="row"><span>Lương chính</span><span>${dinhDang(luongChinh)}</span></div>
-        <div class="row"><span>PC ưu đãi</span><span>${dinhDang(pcUuDai)}</span></div>
-        <div class="row"><span>PC chức vụ</span><span>${dinhDang(pcChucVu)}</span></div>
-        <div class="row"><span>PC thâm niên</span><span>${dinhDang(pcThamNien)}</span></div>
-        <div class="row"><span>PC vượt khung</span><span>${dinhDang(pcVuotKhung)}</span></div>
-        <div class="row"><span>PC khu vực</span><span>${dinhDang(pcKhuVuc)}</span></div>
+<div class="row">
+    <span>BHXH (8%)</span>
+    <span>${dinhDang(bhxh)}</span>
+</div>
+
+<div class="row">
+    <span>BHYT (1.5%)</span>
+    <span>${dinhDang(bhyt)}</span>
+</div>
+
+<div class="row">
+    <span>BHTN (1%)</span>
+    <span>${dinhDang(bhtn)}</span>
+</div>
+
+<div class="row">
+    <span>Tổng bảo hiểm</span>
+    <span>${dinhDang(tongBaoHiem)}</span>
+</div>
+
+<hr>
+
+<div class="row thucnhan">
+    <span>THỰC NHẬN</span>
+    <span>${dinhDang(thucNhan)}</span>
+</div>
 
         <hr>
 
