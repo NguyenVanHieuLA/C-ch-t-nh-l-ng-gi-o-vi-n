@@ -117,10 +117,23 @@ function tinhLuong(){
         pcVuotKhung +
         pcKhuVuc;
 
-    let bhyt = luongChinh * 0.015;
-    let bhxh = luongChinh * 0.09;
+    // Tiền lương làm căn cứ đóng bảo hiểm
+let luongDongBH = luongChinh + pcChucVu + pcVuotKhung;
 
-    let thucNhan = tong - bhyt - bhxh;
+// BHXH 8%
+let bhxh = luongDongBH * 0.08;
+
+// BHYT 1.5%
+let bhyt = luongDongBH * 0.015;
+
+// BHTN 1%
+let bhtn = luongDongBH * 0.01;
+
+// Tổng bảo hiểm
+let tongBaoHiem = bhxh + bhyt + bhtn;
+
+// Thực nhận
+let thucNhan = tong - tongBaoHiem;
 
     document.getElementById("ketqua").innerHTML = `
         <div class="row"><span>Lương chính</span><span>${dinhDang(luongChinh)}</span></div>
